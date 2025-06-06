@@ -1,0 +1,41 @@
+# Created by venv; see https://docs.python.org/3/library/venv.html
+# === Backend (Python) ===
+
+# Virtual environment
+/backend/venv/
+
+# Bytecode Python
+**/__pycache__/
+**/*.py[cod]
+*$py.class
+
+# Logs e arquivos temporários
+*.log
+*.sqlite3
+*.pyc
+*.pyo
+
+# Editor / IDE (exemplos comuns, adapte se usar outro)
+.vscode/
+.idea/
+*.swp
+
+# === Frontend (Node.js) ===
+
+# Node modules
+/frontend/node_modules/
+
+# Logs
+*.log
+
+# Build / output folders (se usar build tools)
+/frontend/dist/
+/frontend/build/
+
+# Env files (se existir)
+.env
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
