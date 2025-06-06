@@ -1,13 +1,13 @@
 import "react"
 import {useState, useEffect} from "react"
 import {MCQChallenge} from "./MCQChallenge.jsx";
-import {useApi} from "../utils/api.js"
+import {useApi} from "../utils/api.js";
 
 export function ChallengeGenerator() {
     const [challenge, setChallenge] = useState(null)
     const [isLoading, setIsLoading] = useState(false)
     const [error, setError] = useState(null)
-    const [difficulty, setDifficulty] = useState("easy")
+    const [difficulty, setDifficulty] = useState("facil")
     const [quota, setQuota] = useState(null)
     const {makeRequest} = useApi()
 
@@ -54,7 +54,7 @@ export function ChallengeGenerator() {
         <h2>Gerador de desafio de codificação</h2>
 
         <div className="quota-display">
-            <p>Challenges remaining today: {quota?.quota_remaining || 0}</p>
+            <p>Desafios restantes hoje: {quota?.quota_remaining || 0}</p>
             {quota?.quota_remaining === 0 && (
                 <p>Próximos reset: {getNextResetTime()?.toLocaleString()}</p>
             )}

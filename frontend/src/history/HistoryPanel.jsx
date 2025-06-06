@@ -14,18 +14,7 @@ export function HistoryPanel() {
     }, [])
 
     const fetchHistory = async () => {
-        setIsLoading(true)
-        setError(null)
-
-        try {
-            const data = await makeRequest("my-history")
-            console.log(data)
-            setHistory(data.challenges)
-        } catch (err) {
-            setError("Falha ao carregar histórico")
-        } finally {
-            setIsLoading(false)
-        }
+        setIsLoading(false)
     }
 
     if (isLoading) {
