@@ -37,7 +37,7 @@ export function ChallengeGenerator() {
             setChallenge(data)
             fetchQuota()
         } catch (err) {
-            setError(err.message || "Failed to generate challenge.")
+            setError(err.message || "Falha ao gerar desafio.")
         } finally {
             setIsLoading(false)
         }
@@ -67,9 +67,9 @@ export function ChallengeGenerator() {
                 onChange={(e) => setDifficulty(e.target.value)}
                 disabled={isLoading}
             >
-                <option value="facil">Fácil</option>
-                <option value="medio">Médio</option>
-                <option value="dificil">Difícil</option>
+                <option value="easy">Fácil</option>
+                <option value="medium">Médio</option>
+                <option value="hard">Difícil</option>
             </select>
         </div>
 
